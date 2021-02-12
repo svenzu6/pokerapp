@@ -1,8 +1,8 @@
 import * as React from 'react'
 
-import { ModalSmallBlind } from './Components/ModalSmallBlind/ModalSmallBlind'
+import { ModalSmallBlind } from './Components/ModalSmallBlind'
 
-function App() {
+export const App = () => {
     const [isOpen, setIsOpen] = React.useState(false)
 
     const toggleDialog = () => {
@@ -49,9 +49,11 @@ function App() {
                     CUT OFF
                 </button>
             </div>
-            {isOpen ? <ModalSmallBlind /> : null}
+            {isOpen
+                ? (
+                    <ModalSmallBlind onClose={toggleDialog} />
+                )
+                : null}
         </>
     )
 }
-
-export default App
