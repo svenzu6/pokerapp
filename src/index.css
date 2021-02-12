@@ -1,89 +1,88 @@
-.table-2 { 
-  width: 1000px;
-  height: 400px;
-  border-radius: 300px;
-  padding: 10px;
-  margin: auto;
-  border-color: black;
-  border-style: groove;
-  border-width: 10px;
-  border: round 50px;
-  background-color: pink;
-  background: linear-gradient(pink, rgb(110, 7, 88));
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.btn-cutoff, .btn-bigblind ,.btn-dealer, .btn-smallblind,.btn-underthegun,.btn-middleposition{
-  width: 100px;
-  height: 100px;
-  background-color: rgb(212, 15, 170);
-  padding: 10px;
-
-  border-radius: 50%;
-  border-style: dotted;
-  border-color: pink;
-  margin: auto;
-
-  text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: pink;
-}
-
 body, html {
-  margin: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
 }
 
 #root {
-  background: linear-gradient(pink, rgb(110, 7, 88));
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    background: linear-gradient(pink, rgb(110, 7, 88));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
 
-.container-gumbi {
-  border-color: black;
-  margin: 20px;
-  border-style:outset;  
+.table {
+    width: 50%;
+    height: 50%;
+    border-radius: 300px;
+    padding: 10px;
+    margin: auto;
+    border: 10px groove black;
+    background: pink linear-gradient(pink, rgb(110, 7, 88));
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.header-gumbi {
-    text-align:center;
+.button {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(212, 15, 170);
+    padding: 10px;
+
+    border-radius: 50%;
+    border-style: dotted;
+    border-color: pink;
+    margin: auto;
+
+    text-align: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: pink;
+}
+
+/* TABLE STYLES */
+.cards-root {
+    background-color: #0a0a0a8a;
+    border-color: black;
+    margin: 20px;
+    border-style: outset;
+}
+
+.cards-header {
+    text-align: center;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: black;
 }
-.gumbi {
+
+.card-container {
     display: grid;
     grid-template-columns: repeat(13, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
 }
 
-.gumb {
+.card-button {
     background-color: rgb(212, 15, 170);
     padding: 10px;
-  
+
     border-style: dotted;
-    border-color: pink; 
-  
+    border-color: pink;
+
     text-align: center;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: black;
 }
 
-.table {
-  width: 1000px;
-  height: 400px;
-  border-radius: 300px;
-  padding: 10px;
-  margin: auto;
-  border-color: black;
-  border-style: groove;
-  border-width: 10px;
-  border: round 50px;
-  background-color: pink;
-  background: linear-gradient(pink, rgb(110, 7, 88));
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+/* DIALOG */
+.dialog {
+    background-color: #0a0a0a8a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
 }
+
 

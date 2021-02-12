@@ -1,85 +1,56 @@
-import useModalBigBlind from './Components/ModalBB/useModalBigBlind.js'
-import useModalDealer from './Components/ModalDealer/useModalDealer.js'
-import useModalMiddlePosition from './Components/ModalMP/useModalMiddlePosition'
-import useModalSmallBlind from './Components/ModalSB/useModalSmallBlind'
-import useModalUnderTheGun from './Components/ModalUTG/useModalUnderTheGun'
-import useModalCutOff from './Components/ModalCutOff/useModalCutOff'
+import * as React from 'react'
 
-// test;sdkljnhslkdnhklsndh
+import { ModalSmallBlind } from './Components/ModalSmallBlind/ModalSmallBlind'
+
 function App() {
-    const { isCOShowing, toggleCO } = useModalCutOff()
-    const { isBBShowing, toggleBB } = useModalBigBlind()
-    const { isDShowing, toggleD } = useModalDealer()
-    const { isSBShowing, toggleSB } = useModalSmallBlind()
-    const { isMPShowing, toggleMP } = useModalMiddlePosition()
-    const { isUTGShowing, toggleUTG } = useModalUnderTheGun()
+    const [isOpen, setIsOpen] = React.useState(false)
+
+    const toggleDialog = () => {
+        setIsOpen(!isOpen)
+    }
 
     return (
-        <div className="pozadina">
-            <div className="table-2">
+        <>
+            <div className="table">
                 <button
-                    className="btn-bigblind"
-                    onClick={toggleBB}
+                    className="button"
+                    onClick={toggleDialog}
                 >
                     BIG BLIND
                 </button>
-                <ModalBigBlind
-                    hideBB={toggleBB}
-                    isBBShowing={isBBShowing}
-                />
                 <button
-                    className="btn-underthegun"
-                    onClick={toggleUTG}
+                    className="button"
+                    onClick={toggleDialog}
                 >
                     UNDER THE GUN
                 </button>
-                <ModalUnderTheGun
-                    hideUTG={toggleUTG}
-                    isUTGShowing={isUTGShowing}
-                />
                 <button
-                    className="btn-middleposition"
-                    onClick={toggleMP}
+                    className="button"
+                    onClick={toggleDialog}
                 >
                     MIDDLE POSITION
                 </button>
-                <ModalMiddlePosition
-                    hideMP={toggleMP}
-                    isMPShowing={isMPShowing}
-                />
                 <button
-                    className="btn-smallblind"
-                    onClick={toggleSB}
+                    className="button"
+                    onClick={toggleDialog}
                 >
                     SMALL BLIND
                 </button>
-                <ModalSmallBlind
-                    hideSB={toggleSB}
-                    isSBShowing={isSBShowing}
-                />
                 <button
-                    className="btn-dealer"
-                    onClick={toggleD}
+                    className="button"
+                    onClick={toggleDialog}
                 >
                     DEALER
                 </button>
-                <ModalDealer
-                    hideD={toggleD}
-                    isDShowing={isDShowing}
-                />
                 <button
-                    className="btn-cutoff"
-                    onClick={toggleCO}
+                    className="button"
+                    onClick={toggleDialog}
                 >
                     CUT OFF
                 </button>
-                <ModalCutOff
-                    hideCO={toggleCO}
-                    isCOShowing={isCOShowing}
-                />
-
             </div>
-        </div>
+            {isOpen ? <ModalSmallBlind /> : null}
+        </>
     )
 }
 
