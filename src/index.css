@@ -19,7 +19,7 @@ body, html {
     padding: 10px;
     margin: auto;
     border: 10px groove black;
-    background: pink linear-gradient(pink, rgb(110, 7, 88));
+    background: pink linear-gradient(rgb(110, 7, 88),pink );
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
