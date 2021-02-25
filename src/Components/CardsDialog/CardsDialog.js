@@ -1,4 +1,5 @@
 // TODO: SET NAME AND VALUE FOR EACH POSITION AND USE NAME IN THE DIALOG TITLE
+
 export const POSITIONS = {
     BigBlind: 'Big Blind',
     CutOff: 'Cut Off',

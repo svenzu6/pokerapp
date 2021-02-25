@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import {
+
     CardsDialog,
     POSITIONS,
 } from './Components/CardsDialog/CardsDialog'
@@ -20,6 +21,7 @@ export const App = () => {
 
     return (
         <>
+
             <div className="table">
                 <button
                     className="button"
